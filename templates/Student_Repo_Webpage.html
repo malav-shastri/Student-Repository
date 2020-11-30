@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1> {{table_name}}</h1>
+<h2>{{table_info}}</h2>
+<table border=""2>
+    <th>Student</th>
+    <th>CWID</th>
+    <th>Course</th>
+    <th>Grade</th>
+    <th>Instructor</th>
+
+    {% for info in final_data %}
+        <tr>
+            <td>{{info.Student}}</td>
+            <td>{{info.CWID}}</td>
+            <td>{{info.Course}}</td>
+            <td>{{info.Grade}}</td>
+            <td>{{info.Instructor}}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
